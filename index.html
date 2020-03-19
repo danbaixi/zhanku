@@ -130,7 +130,7 @@
     {{if l.child}}
         {{each l.child c}}
         <div class="nav-item">
-            <h4 class="text-gray"><i class="linecons-tag" style="margin-right: 7px;" id="{{l.title}}"></i>{{c.title}}</h4>
+            <h4 class="text-gray"><i class="linecons-tag" style="margin-right: 7px;" id="{{c.title}}"></i>{{c.title}}</h4>
             <div class="row">
                 {{each c.nav n}}
                 <div class="col-sm-3 col-lg-2">
@@ -205,12 +205,14 @@
 
             public_vars.$mainMenu.add(public_vars.$sidebarProfile).toggleClass('mobile-is-visible');
             ps_destroy();
-            $("html, body").animate({
+            if($($(this).attr("href")).length > 0){
+                $("html, body").animate({
                 scrollTop: $($(this).attr("href")).offset().top - 30
             }, {
                 duration: 500,
                 easing: "swing"
             });
+            }
         });
         return false;
     });
