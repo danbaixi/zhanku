@@ -1,0 +1,276 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="author" content="danbaixi" />
+    <title>小智导航 - 收集全球优质网站</title>
+    <meta name="keywords" content="网址导航,设计资源,UI设计,网址大全,设计师导航,优秀网站,网站推荐">
+    <meta name="description" content="小智导航 - 收集全球优质网站">
+    <link rel="shortcut icon" href="assets/images/favicon.png">
+    <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Arimo:400,700,400italic">
+    <link rel="stylesheet" href="assets/css/fonts/linecons/css/linecons.css">
+    <link rel="stylesheet" href="assets/css/fonts/fontawesome/css/font-awesome.min.css">
+    <link rel="stylesheet" href="assets/css/bootstrap.css">
+    <link rel="stylesheet" href="assets/css/xenon-core.css">
+    <link rel="stylesheet" href="assets/css/xenon-components.css">
+    <link rel="stylesheet" href="assets/css/xenon-skins.css">
+    <link rel="stylesheet" href="assets/css/nav.css">
+    <script src="assets/js/jquery-1.11.1.min.js"></script>
+    <script src="assets/js/art-template.js"></script>
+    <script src="assets/js/source.js"></script>
+</head>
+<body class="page-body">
+    <div class="page-container">
+        <div class="sidebar-menu toggle-others fixed">
+            <div class="sidebar-menu-inner">
+                <header class="logo-env">
+                    <!-- logo -->
+                    <div class="logo">
+                        <a href="index.html" class="logo-expanded">
+                            <img src="assets/images/logo@2x.png" width="100%" alt="" />
+                        </a>
+                        <a href="index.html" class="logo-collapsed">
+                            <img src="assets/images/logo-collapsed@2x.png" width="40" alt="" />
+                        </a>
+                    </div>
+                    <div class="mobile-menu-toggle visible-xs">
+                        <a href="#" data-toggle="user-info-menu">
+                            <i class="linecons-cog"></i>
+                        </a>
+                        <a href="#" data-toggle="mobile-menu">
+                            <i class="fa-bars"></i>
+                        </a>
+                    </div>
+                </header>
+                <div id="menu-content"></div>
+            </div>
+        </div>
+        <div class="main-content">
+            <!-- 顶部导航 -->
+            <nav class="navbar user-info-navbar" role="navigation">
+                <div class="search">
+                    <form>
+                        <div class="form-group">
+                            <i class="linecons-search"></i>
+                            <input class="form-control" type="text" name="search" placeholder="搜索网站">
+                        </div>
+                    </form>
+
+                </div>
+                <a href="https://github.com/WebStackPage/WebStackPage.github.io" target="_blank"><img style="position: absolute; top: 0; right: 0; border: 0;" src="https://s3.amazonaws.com/github/ribbons/forkme_right_darkblue_121621.png" alt="Fork me on GitHub"></a>
+            </nav>
+
+            <!-- 列表 -->
+            <div id="nav-list"></div>
+        </div>
+    </div>
+</body>
+</html>
+<!-- 目录模板 -->
+<script id="menu" type="text/html">
+<ul id="main-menu" class="main-menu">
+{{each list l}}
+<li>
+    <a href="#{{l.title}}" class="smooth">
+        <i class="linecons-{{l.icon}}"></i>
+        <span class="title">{{l.title}}</span>
+        {{if l.label}}
+        <span class="label pull-right hidden-collapsed label-{{l.label.color}}">{{l.label.title}}</span>
+        {{/if}}
+    </a>
+    {{if l.child}}
+        <ul>
+            {{each l.child c}}
+                <li><a href="#{{c.title}}" class="smooth">
+                    <span class="title">{{c.title}}</span>
+                    {{if c.label}}
+                    <span class="label pull-right hidden-collapsed label-{{c.label.color}}">{{c.label.title}}</span>
+                    {{/if}}
+                </a></li>
+            {{/each}}
+        </ul>
+    {{/if}}
+</li>
+{{/each}}
+</ul>
+</script>
+<!-- 列表模板 -->
+<script id="list" type="text/html">
+{{each list l}}
+<div class="nav-item">
+    {{if l.nav}}
+    <h4 class="text-gray"><i class="linecons-tag" style="margin-right: 7px;" id="{{l.title}}"></i>{{l.title}}</h4>
+    <div class="row">
+        {{each l.nav n}}
+        <div class="col-sm-3 col-lg-2">
+            <div class="xe-widget xe-conversations box2 label-info" onclick="window.open('{{n.url}}', '_blank')" data-toggle="tooltip" data-placement="bottom" title="" data-original-title="{{n.url}}">
+                <div class="xe-comment-entry">
+                    <a class="xe-user-img">
+                        {{if n.image}}
+                        <img data-src="assets/images/logos/{{n.image}}" class="lozad">
+                        {{else}}
+                        <span style="backgroud:{{n.title | randomColor}}">{{n.title | titleFirstWord}}</span>
+                        {{/if}}
+                    </a>
+                    <div class="xe-comment">
+                        <a href="#" class="xe-user-name overflowClip_1">
+                            <strong class="title">{{n.title}}</strong>
+                        </a>
+                        <p class="desc overflowClip_2">{{n.desc}}</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        {{/each}}
+    </div>
+    {{/if}}
+
+    {{if l.child}}
+        {{each l.child c}}
+        <div class="nav-item">
+            <h4 class="text-gray"><i class="linecons-tag" style="margin-right: 7px;" id="{{l.title}}"></i>{{c.title}}</h4>
+            <div class="row">
+                {{each c.nav n}}
+                <div class="col-sm-3 col-lg-2">
+                    <div class="xe-widget xe-conversations box2 label-info" onclick="window.open('{{n.url}}', '_blank')" data-toggle="tooltip" data-placement="bottom" title="" data-original-title="{{n.url}}">
+                        <div class="xe-comment-entry">
+                            <a class="xe-user-img">
+                                {{if n.image}}
+                                <img data-src="assets/images/logos/{{n.image}}" class="lozad">
+                                {{else}}
+                                <span style="background:{{n.title | randomColor}}">{{n.title | titleFirstWord}}</span>
+                                {{/if}}
+                            </a>
+                            <div class="xe-comment">
+                                <a href="#" class="xe-user-name overflowClip_1">
+                                    <strong class="title">{{n.title}}</strong>
+                                </a>
+                                <p class="desc overflowClip_2">{{n.desc}}</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                {{/each}}
+        </div>
+        {{/each}}
+    </div>
+    {{/if}}
+</div>
+{{/each}}
+</script>
+<script type="text/javascript">
+    $(document).ready(function() {
+        render()
+        //监听搜索
+        $("input[name='search']").bind('input propertychange',function(){
+            seach($(this).val())
+        })
+         //img lazy loaded
+         const observer = lozad();
+         observer.observe();
+
+        $(document).on('click', '.has-sub', function(){
+            var _this = $(this)
+            if(!$(this).hasClass('expanded')) {
+               setTimeout(function(){
+                    _this.find('ul').attr("style","")
+               }, 300);
+              
+            } else {
+                $('.has-sub ul').each(function(id,ele){
+                    var _that = $(this)
+                    if(_this.find('ul')[0] != ele) {
+                        setTimeout(function(){
+                            _that.attr("style","")
+                        }, 300);
+                    }
+                })
+            }
+        })
+        $('.user-info-menu .hidden-sm').click(function(){
+            if($('.sidebar-menu').hasClass('collapsed')) {
+                $('.has-sub.expanded > ul').attr("style","")
+            } else {
+                $('.has-sub.expanded > ul').show()
+            }
+        })
+        $("#main-menu li ul li").click(function() {
+            $(this).siblings('li').removeClass('active'); // 删除其他兄弟元素的样式
+            $(this).addClass('active'); // 添加当前元素的样式
+        });
+        $("a.smooth").click(function(ev) {
+            ev.preventDefault();
+
+            public_vars.$mainMenu.add(public_vars.$sidebarProfile).toggleClass('mobile-is-visible');
+            ps_destroy();
+            $("html, body").animate({
+                scrollTop: $($(this).attr("href")).offset().top - 30
+            }, {
+                duration: 500,
+                easing: "swing"
+            });
+        });
+        return false;
+    });
+
+    var href = "";
+    var pos = 0;
+    $("a.smooth").click(function(e) {
+        $("#main-menu li").each(function() {
+            $(this).removeClass("active");
+        });
+        $(this).parent("li").addClass("active");
+        e.preventDefault();
+        href = $(this).attr("href");
+        pos = $(href).position().top - 30;
+    });
+
+    // 模板渲染
+    function render(){
+        //注册过滤器，获取标题首个字符，没有logo则显示
+        template.defaults.imports.titleFirstWord = function(title){
+            return title.substr(0,1)
+        }
+        //注册过滤器，根据标题获取背景颜色
+        template.defaults.imports.randomColor = function(title){
+            var colors = ['#084177','#2b580c','#1eb2a6','#721b65','#f8615a','#a8d3da','#a8e6cf','#4f3961','#f1935c']
+            var index = title.length % colors.length 
+            return colors[index]
+        }
+        var data = navData
+        var category = template('menu',data)
+        var list = template('list',data)
+        document.getElementById('menu-content').innerHTML = category
+        document.getElementById('nav-list').innerHTML = list
+    }
+
+    //搜索
+    function seach(keyWord){
+        var keyWord = keyWord ? keyWord.toLowerCase() : ''
+        $(document).find(".xe-comment").each(function(i,e){
+            var title = $(e).find(".title").html().toLowerCase()
+            var desc = $(e).find(".desc").html().toLowerCase()
+            var parent = $(e).parents(".col-sm-3")
+            if((title.indexOf(keyWord) != -1 || desc.indexOf(keyWord) != -1)){
+                if(parent.hasClass("hide")){
+                    parent.removeClass("hide")
+                }
+            }else if(!parent.hasClass("hide")){
+                parent.addClass("hide")
+            }
+        })
+    }
+
+</script>
+<!-- Bottom Scripts -->
+<script src="assets/js/bootstrap.min.js"></script>
+<script src="assets/js/TweenMax.min.js"></script>
+<script src="assets/js/resizeable.js"></script>
+<script src="assets/js/joinable.js"></script>
+<script src="assets/js/xenon-api.js"></script>
+<script src="assets/js/xenon-toggles.js"></script>
+<!-- JavaScripts initializations and stuff -->
+<script src="assets/js/xenon-custom.js"></script>
+<script src="assets/js/lozad.js"></script>
