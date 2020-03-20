@@ -13,8 +13,9 @@ var navData = {
             title: "实用工具",
             icon: "cog",
             child: [
+                //图文编辑
                 {
-                    //图文编辑
+                    
                     title:"图文编辑",
                     nav:[
                         {
@@ -42,12 +43,6 @@ var navData = {
                             image:"diagrams.png"
                         }, 
                         {
-                            title:"Diagrams",
-                            desc:"【推荐】流程图免费制作",
-                            url:"https://app.diagrams.net/",
-                            image:"diagrams.png"
-                        }, 
-                        {
                             title:"石墨文档",
                             desc:"多人实时协办文档office",
                             url:"https://shimo.im",
@@ -66,7 +61,159 @@ var navData = {
                             image:"mdeditor.png"
                         },
                     ]
+                },
+                //在线设计
+                {
+                    title:"在线设计",
+                    nav:[
+                        {
+                            title:"创客贴",
+                            desc:"在线制图1",
+                            url:"https://www.chuangkit.com/designtools/startdesign",
+                        },
+                        {
+                            title:"稿定设计",
+                            desc:"在线制图2",
+                            url:"https://www.gaoding.com/",
+                        },
+                        {
+                            title:"Wordart",
+                            desc:"制作文字图案(不fq会很卡)",
+                            url:"https://wordart.com/",
+                            image:"wordart.png"
+                        },
+                        {
+                            title:"Cool Background",
+                            desc:"在线生成背景图或代码",
+                            url:"https://coolbackgrounds.io/",
+                            image:"coolbackground.png"
+                        },
+                        {
+                            title:"Shapefactory",
+                            desc:"在线设计LOGO、渐变图等",
+                            url:"https://shapefactory.co/",
+                        },
+                        {
+                            title:"Uigradients",
+                            desc:"在线生成渐变色1",
+                            url:"https://uigradients.com/",
+                        },
+                        {
+                            title:"Webgradients",
+                            desc:"在线生成渐变色2",
+                            url:"https://webgradients.com/",
+                        },
+                        {
+                            title:"Colorhunt",
+                            desc:"在线配色1",
+                            url:"https://colorhunt.co/",
+                            image:"colorhunt.png"
+                        },
+                        {
+                            title:"Colordrop",
+                            desc:"在线配色2",
+                            url:"https://colordrop.io/",
+                            image:"colordrop.png"
+                        },
+                        {
+                            title:"Photomosh",
+                            desc:"在线生成故障艺术图",
+                            url:"https://photomosh.com/",
+                            image:"photomosh.png"
+                        },
+                        {
+                            title:"Pixelmap",
+                            desc:"在线可视化地图图表生成",
+                            url:"https://pixelmap.amcharts.com/",
+                            image:"pixelmap.png"
+                        },
+                        {
+                            title:"FLAT SURFACE SHADER",
+                            desc:"在线制作lowpoly背景",
+                            url:"http://matthew.wagerfield.com/flat-surface-shader/",
+                            image:"matthew.png"
+                        },
+                        {
+                            title:"Blobmaker",
+                            desc:"在线生成异形图",
+                            url:"https://www.blobmaker.app/",
+                            image:"blobmaker.png"
+                        },
+                        {
+                            title:"Getwaves",
+                            desc:"在线生成波形背景图",
+                            url:"https://getwaves.io/",
+                            image:"getwaves.png"
+                        },
+                        {
+                            title:"Wangyasai",
+                            desc:"放射性图片生成",
+                            url:"https://wangyasai.github.io/Stars-Emmision/",
+                            image:"wangyasai.png"
+                        },
+                        {
+                            title:"Gif之家",
+                            desc:"在线生成gif动态表情包",
+                            url:"https://www.gifhome.com/",
+                            image:"gifhome.png"
+                        },
+                    ]
+                },
+                //文件处理
+                {
+                    title:"文件处理",
+                    nav: [
+                        {
+                            title:"TinyPng",
+                            desc:"在线压缩png,jpg图片",
+                            url:"https://tinypng.com/",
+                            image:"tinypng.png"
+                        }, 
+                        {
+                            title:"Convertio",
+                            desc:"万能的文件格式转化",
+                            url:"https://convertio.co/zh/",
+                            image:"convertio.png"
+                        },
+                        {
+                            title:"PDF.IO",
+                            desc:"PDF在线转化",
+                            url:"https://pdf.io/",
+                            image:"pdfio.png"
+                        },
+                    ]
                 }
+            ]
+        },
+        //有点意思
+        {
+            title: "有点意思",
+            icon: "gamepad",
+            nav:[
+                {
+                    title:"自由钢琴",
+                    desc:"在线弹钢琴，内置很多简谱",
+                    url:"https://www.autopiano.cn/",
+                    image:"autopiano.png"
+                }, 
+                {
+                    title:"在线开车",
+                    desc:"一款精致的网页小游戏，低配电脑请勿打开",
+                    url:"https://bruno-simon.com/",
+                    image:"bruno-simon.png"
+                }, 
+                {
+                    title:"Minecraft",
+                    desc:"在线版我的世界",
+                    url:"https://classic.minecraft.net/",
+                    image:"minecraft.png"
+                }, 
+                {
+                    title:"Windows93",
+                    desc:"在线体验Windows93系统",
+                    url:"http://www.windows93.net/",
+                    image:"windows93.png"
+                }, 
             ]
         },
         //设计资源
@@ -185,103 +332,6 @@ var navData = {
                             desc:"sketch素材免费下载",
                             url:"http://sucai.sketchchina.com/",
                             image:"sketchchina.png"
-                        },
-                    ]
-                },
-                //在线设计
-                {
-                    title:"在线设计",
-                    nav:[
-                        {
-                            title:"创客贴",
-                            desc:"在线制图1",
-                            url:"https://www.chuangkit.com/designtools/startdesign",
-                        },
-                        {
-                            title:"稿定设计",
-                            desc:"在线制图2",
-                            url:"https://www.gaoding.com/",
-                        },
-                        {
-                            title:"Wordart",
-                            desc:"制作文字图案(不fq会很卡)",
-                            url:"https://wordart.com/",
-                            image:"wordart.png"
-                        },
-                        {
-                            title:"Cool Background",
-                            desc:"在线生成背景图或代码",
-                            url:"https://coolbackgrounds.io/",
-                            image:"coolbackground.png"
-                        },
-                        {
-                            title:"Shapefactory",
-                            desc:"在线设计LOGO、渐变图等",
-                            url:"https://shapefactory.co/",
-                        },
-                        {
-                            title:"Uigradients",
-                            desc:"在线生成渐变色1",
-                            url:"https://uigradients.com/",
-                        },
-                        {
-                            title:"Webgradients",
-                            desc:"在线生成渐变色2",
-                            url:"https://webgradients.com/",
-                        },
-                        {
-                            title:"Colorhunt",
-                            desc:"在线配色1",
-                            url:"https://colorhunt.co/",
-                            image:"colorhunt.png"
-                        },
-                        {
-                            title:"Colordrop",
-                            desc:"在线配色2",
-                            url:"https://colordrop.io/",
-                            image:"colordrop.png"
-                        },
-                        {
-                            title:"Photomosh",
-                            desc:"在线生成故障艺术图",
-                            url:"https://photomosh.com/",
-                            image:"photomosh.png"
-                        },
-                        {
-                            title:"Pixelmap",
-                            desc:"在线可视化地图图表生成",
-                            url:"https://pixelmap.amcharts.com/",
-                            image:"pixelmap.png"
-                        },
-                        {
-                            title:"FLAT SURFACE SHADER",
-                            desc:"在线制作lowpoly背景",
-                            url:"http://matthew.wagerfield.com/flat-surface-shader/",
-                            image:"matthew.png"
-                        },
-                        {
-                            title:"Blobmaker",
-                            desc:"在线生成异形图",
-                            url:"https://www.blobmaker.app/",
-                            image:"blobmaker.png"
-                        },
-                        {
-                            title:"Getwaves",
-                            desc:"在线生成波形背景图",
-                            url:"https://getwaves.io/",
-                            image:"getwaves.png"
-                        },
-                        {
-                            title:"Wangyasai",
-                            desc:"放射性图片生成",
-                            url:"https://wangyasai.github.io/Stars-Emmision/",
-                            image:"wangyasai.png"
-                        },
-                        {
-                            title:"Gif之家",
-                            desc:"在线生成gif动态表情包",
-                            url:"https://www.gifhome.com/",
-                            image:"gifhome.png"
                         },
                     ]
                 },
