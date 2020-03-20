@@ -5,18 +5,74 @@ var navData = {
             title: "常用推荐",
             icon: "star",
             nav:[
+                
+            ]
+        },
+        //实用工具
+        {
+            title: "实用工具",
+            icon: "cog",
+            child: [
                 {
-                    title:"Dribbble",
-                    desc:"全球UI设计师作品分享平台。",
-                    url:"https://dribbble.com",
-                    image:"iconfont.png"
-                },
+                    //图文编辑
+                    title:"图文编辑",
+                    nav:[
+                        {
+                            title:"百度脑图",
+                            desc:"百度出品免费在线制作思维导图",
+                            url:"https://naotu.baidu.com/",
+                            image:"naotu.png"
+                        }, 
+                        {
+                            title:"百度图说",
+                            desc:"可视化制作图表(不需要会编程)",
+                            url:"https://tushuo.baidu.com/",
+                            image:"tushuo.png"
+                        }, 
+                        {
+                            title:"ZhiMap",
+                            desc:"可多人同时编辑的免费在线思维导图",
+                            url:"https://zhimap.com",
+                            image:"zhimap.png"
+                        }, 
+                        {
+                            title:"Diagrams",
+                            desc:"【推荐】流程图免费制作",
+                            url:"https://app.diagrams.net/",
+                            image:"diagrams.png"
+                        }, 
+                        {
+                            title:"Diagrams",
+                            desc:"【推荐】流程图免费制作",
+                            url:"https://app.diagrams.net/",
+                            image:"diagrams.png"
+                        }, 
+                        {
+                            title:"石墨文档",
+                            desc:"多人实时协办文档office",
+                            url:"https://shimo.im",
+                            image:"shimo.png"
+                        },
+                        {
+                            title:"腾讯文档",
+                            desc:"多人协办在线文档",
+                            url:"https://docs.qq.com/",
+                            image:"docsqq.png"
+                        },
+                        {
+                            title:"Cmd Markdown",
+                            desc:"在线Markdown写作",
+                            url:"https://www.zybuluo.com/mdeditor",
+                            image:"mdeditor.png"
+                        },
+                    ]
+                }
             ]
         },
         //设计资源
         {
             title: "设计资源",
-            icon: "lightbulb",
+            icon: "send",
             child: [
                 //素材资源
                 {
@@ -79,6 +135,33 @@ var navData = {
                             url:"https://www.yrucd.com/category/designresources",
                             image:"yrucd.png"
                         },
+                        {
+                            title:"Visual Hunt",
+                            desc:"无版权图片素材免费下载",
+                            url:"https://visualhunt.com/",
+                        },
+                        {
+                            title:"Isorepublic",
+                            desc:"无版权图片素材免费下载",
+                            url:"https://isorepublic.com/",
+                        },
+                        {
+                            title:"美图集",
+                            desc:"精美图片免费下载",
+                            url:"https://isorepublic.com/",
+                        },
+                        {
+                            title:"Foodiesfeed",
+                            desc:"高清美食图片免费下载",
+                            url:"https://www.foodiesfeed.com/",
+                            image:"foodiesfeed.png"
+                        },
+                        {
+                            title:"故宫壁纸",
+                            desc:"故宫壁纸免费下载",
+                            url:"https://www.dpm.org.cn/lights/royal.html",
+                            image:"dpm.png"
+                        },
                     ]
                 },
                 //UI 设计
@@ -97,6 +180,12 @@ var navData = {
                             url:"https://freebiesupply.com/",
                             image:"freebiesupply.png"
                         },
+                        {
+                            title:"sketchchina",
+                            desc:"sketch素材免费下载",
+                            url:"http://sucai.sketchchina.com/",
+                            image:"sketchchina.png"
+                        },
                     ]
                 },
                 //在线设计
@@ -112,6 +201,12 @@ var navData = {
                             title:"稿定设计",
                             desc:"在线制图2",
                             url:"https://www.gaoding.com/",
+                        },
+                        {
+                            title:"Wordart",
+                            desc:"制作文字图案(不fq会很卡)",
+                            url:"https://wordart.com/",
+                            image:"wordart.png"
                         },
                         {
                             title:"Cool Background",
@@ -182,6 +277,12 @@ var navData = {
                             url:"https://wangyasai.github.io/Stars-Emmision/",
                             image:"wangyasai.png"
                         },
+                        {
+                            title:"Gif之家",
+                            desc:"在线生成gif动态表情包",
+                            url:"https://www.gifhome.com/",
+                            image:"gifhome.png"
+                        },
                     ]
                 },
                 //Mockup
@@ -210,6 +311,12 @@ var navData = {
                             desc:"mockup素材免费下载",
                             url:"https://www.graphberry.com",
                             image:"graphberry.png"
+                        },
+                        {
+                            title:"Smartmockups",
+                            desc:"惊艳的产品模型(有点卡)",
+                            url:"https://smartmockups.com/",
+                            image:"smartmockups.png"
                         },
                     ]
                 },

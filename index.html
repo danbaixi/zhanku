@@ -5,12 +5,10 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta name="author" content="danbaixi" />
-    <title>小智导航 - 收集全球优质网站</title>
-    <meta name="keywords" content="网址导航,设计资源,UI设计,网址大全,设计师导航,优秀网站,网站推荐">
-    <meta name="description" content="小智导航 - 收集全球优质网站">
+    <title>站库 - 优质网站收藏库</title>
+    <meta name="keywords" content="网址导航,设计资源,UI设计,网址大全,设计师导航,优秀网站,网站推荐，站库">
+    <meta name="description" content="站库 - 优质网站收藏库">
     <link rel="shortcut icon" href="assets/images/favicon.png">
-    <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Arimo:400,700,400italic">
-    <link rel="stylesheet" href="assets/css/fonts/linecons/css/linecons.css">
     <link rel="stylesheet" href="assets/css/fonts/fontawesome/css/font-awesome.min.css">
     <link rel="stylesheet" href="assets/css/bootstrap.css">
     <link rel="stylesheet" href="assets/css/xenon-core.css">
@@ -27,7 +25,7 @@
             <div class="sidebar-menu-inner">
                 <header class="logo-env">
                     <!-- logo -->
-                    <div class="logo">
+                    <div class="logo hidden-xs">
                         <a href="index.html" class="logo-expanded">
                             <img src="assets/images/logo@2x.png" width="100%" alt="" />
                         </a>
@@ -35,33 +33,40 @@
                             <img src="assets/images/logo-collapsed@2x.png" width="40" alt="" />
                         </a>
                     </div>
-                    <div class="mobile-menu-toggle visible-xs">
-                        <a href="#" data-toggle="user-info-menu">
-                            <i class="linecons-cog"></i>
+                    <div class="mobile-logo visible-xs">
+                        <a href="index.html" class="logo-expanded">
+                            <img src="assets/images/logo@2x.png" width="100%" alt="" />
                         </a>
+                    </div>
+                    <li class="hidden-sm hidden-xs">
+                        <a href="#" data-toggle="sidebar">
+                            <i class="fa-bars"></i>
+                        </a>
+                    </li>
+                    <div class="mobile-menu-toggle visible-xs">
                         <a href="#" data-toggle="mobile-menu">
                             <i class="fa-bars"></i>
                         </a>
                     </div>
                 </header>
+                <div class="search">
+                    <form>
+                        <div class="form-group">
+                            <i class="fa fa-search"></i>
+                            <input class="form-control" type="text" name="search" placeholder="搜索网站">
+                        </div>
+                    </form>
+                </div>
+                <div class="total hidden-xs">
+                    <p>共收集了 <span class="nav-total">0</span> 个优质网站</p>
+                </div>
                 <div id="menu-content"></div>
             </div>
         </div>
         <div class="main-content">
-            <!-- 顶部导航 -->
-            <nav class="navbar user-info-navbar" role="navigation">
-                <div class="search">
-                    <form>
-                        <div class="form-group">
-                            <i class="linecons-search"></i>
-                            <input class="form-control" type="text" name="search" placeholder="搜索网站">
-                        </div>
-                    </form>
-
-                </div>
-                <a href="https://github.com/WebStackPage/WebStackPage.github.io" target="_blank"><img style="position: absolute; top: 0; right: 0; border: 0;" src="https://s3.amazonaws.com/github/ribbons/forkme_right_darkblue_121621.png" alt="Fork me on GitHub"></a>
-            </nav>
-
+            <a class="hidden-xs" href="https://github.com/danbaixi/zhanku" target="_blank">
+                <img class="github" src="assets/images/forkme_right_darkblue.png" alt="Fork me on GitHub">
+            </a>
             <!-- 列表 -->
             <div id="nav-list"></div>
         </div>
@@ -74,7 +79,7 @@
 {{each list l}}
 <li>
     <a href="#{{l.title}}" class="smooth">
-        <i class="linecons-{{l.icon}}"></i>
+        <i class="fa fa-{{l.icon}}"></i>
         <span class="title">{{l.title}}</span>
         {{if l.label}}
         <span class="label pull-right hidden-collapsed label-{{l.label.color}}">{{l.label.title}}</span>
@@ -101,7 +106,9 @@
 {{each list l}}
 <div class="nav-item">
     {{if l.nav}}
-    <h4 class="text-gray"><i class="linecons-tag" style="margin-right: 7px;" id="{{l.title}}"></i>{{l.title}}</h4>
+    <h4 class="text-gray"><i class="fa fa-tag" style="margin-right: 7px;" id="{{l.title}}"></i>{{l.title}} 
+        <span class="nav-count">({{l.nav | getNavLength}})</span>
+    </h4>
     <div class="row">
         {{each l.nav n}}
         <div class="col-sm-3 col-lg-2">
@@ -116,7 +123,7 @@
                     </a>
                     <div class="xe-comment">
                         <a href="#" class="xe-user-name overflowClip_1">
-                            <strong class="title">{{n.title}}</strong>
+                            <p class="title">{{n.title}}</p>
                         </a>
                         <p class="desc overflowClip_2">{{n.desc}}</p>
                     </div>
@@ -130,7 +137,10 @@
     {{if l.child}}
         {{each l.child c}}
         <div class="nav-item">
-            <h4 class="text-gray"><i class="linecons-tag" style="margin-right: 7px;" id="{{c.title}}"></i>{{c.title}}</h4>
+            <h4 class="text-gray">
+                <i class="fa fa-tag" style="margin-right: 7px;" id="{{c.title}}"></i>{{c.title}} 
+                <span class="nav-count">({{c.nav | getNavLength}})</span>
+            </h4>
             <div class="row">
                 {{each c.nav n}}
                 <div class="col-sm-3 col-lg-2">
@@ -145,7 +155,7 @@
                             </a>
                             <div class="xe-comment">
                                 <a href="#" class="xe-user-name overflowClip_1">
-                                    <strong class="title">{{n.title}}</strong>
+                                    <p class="title">{{n.title}}</p>
                                 </a>
                                 <p class="desc overflowClip_2">{{n.desc}}</p>
                             </div>
@@ -189,13 +199,7 @@
                 })
             }
         })
-        $('.user-info-menu .hidden-sm').click(function(){
-            if($('.sidebar-menu').hasClass('collapsed')) {
-                $('.has-sub.expanded > ul').attr("style","")
-            } else {
-                $('.has-sub.expanded > ul').show()
-            }
-        })
+
         $("#main-menu li ul li").click(function() {
             $(this).siblings('li').removeClass('active'); // 删除其他兄弟元素的样式
             $(this).addClass('active'); // 添加当前元素的样式
@@ -229,6 +233,7 @@
         pos = $(href).position().top - 30;
     });
 
+    var navTotal = 0 //网站总数
     // 模板渲染
     function render(){
         //注册过滤器，获取标题首个字符，没有logo则显示
@@ -241,11 +246,17 @@
             var index = title.length % colors.length 
             return colors[index]
         }
+        //注册过滤器，获取分类下网站个数
+        template.defaults.imports.getNavLength = function(nav){
+            navTotal += nav.length
+            return nav.length
+        }
         var data = navData
         var category = template('menu',data)
         var list = template('list',data)
         document.getElementById('menu-content').innerHTML = category
         document.getElementById('nav-list').innerHTML = list
+        $(".nav-total").html(navTotal)
     }
 
     //搜索
