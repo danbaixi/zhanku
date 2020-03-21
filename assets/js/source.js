@@ -1,13 +1,13 @@
 var navData = {
     list:[
         //常用推荐
-        {
-            title: "常用推荐",
-            icon: "star",
-            nav:[
+        // {
+        //     title: "常用推荐",
+        //     icon: "star",
+        //     nav:[
                 
-            ]
-        },
+        //     ]
+        // },
         //实用工具
         {
             title: "实用工具",
@@ -157,6 +157,36 @@ var navData = {
                             url:"https://www.gifhome.com/",
                             image:"gifhome.png"
                         },
+                        {
+                            title:"我爱斗图",
+                            desc:"表情包搜索|表情包制作",
+                            url:"https://www.52doutu.cn/",
+                            image:"52doutu.png"
+                        },
+                        {
+                            title:"BrowserFrame",
+                            desc:"在线截图网站全页面(多浏览器可选)",
+                            url:"https://browserframe.com/",
+                            image:"browserframe.png"
+                        },
+                        {
+                            title:"Screenguru",
+                            desc:"在线截图网站全页面(比上一个好看)",
+                            url:"https://screen.guru/",
+                            image:"screenguru.png"
+                        },
+                        {
+                            title:"Svgbackgrounds",
+                            desc:"在线生成SVG背景图",
+                            url:"https://www.svgbackgrounds.com/",
+                            image:"svgbackgrounds.png"
+                        },
+                        {
+                            title:"Logoly",
+                            desc:"在线制作pornhub风格LOGO",
+                            url:"https://logoly.pro/",
+                            image:"logoly.png"
+                        },
                     ]
                 },
                 //文件处理
@@ -170,6 +200,12 @@ var navData = {
                             image:"tinypng.png"
                         }, 
                         {
+                            title:"Squoosh",
+                            desc:"谷歌大佬出品的在线图片压缩",
+                            url:"https://squoosh.app/",
+                            image:"squoosh.png"
+                        }, 
+                        {
                             title:"Convertio",
                             desc:"万能的文件格式转化",
                             url:"https://convertio.co/zh/",
@@ -181,6 +217,46 @@ var navData = {
                             url:"https://pdf.io/",
                             image:"pdfio.png"
                         },
+                        {
+                            title:"Smallpdf",
+                            desc:"多功能PDF转化器",
+                            url:"https://smallpdf.com/",
+                            image:"smallpdf.png"
+                        },
+                        {
+                            title:"Iloveimg",
+                            desc:"在线批量编辑图片",
+                            url:"https://www.iloveimg.com/zh-cn",
+                            image:"iloveimg.png"
+                        },
+                        {
+                            title:"蜜蜂剪辑",
+                            desc:"在线视频剪辑|视频转GIF",
+                            url:"https://beecut.cn/",
+                            image:"beecut.png"
+                        },
+                    ]
+                },
+                //下载工具
+                {
+                    title:"下载工具",
+                    nav: [
+                        {
+                            title:"唧唧",
+                            desc:"下载b站视频|bilibili",
+                            url:"https://www.jijidown.com/",
+                        },
+                        {
+                            title:"海盗湾",
+                            desc:"BT搜索资源站",
+                            url:"http://thepiratebay.se.net/",
+                        },
+                        {
+                            title:"超高无损音乐",
+                            desc:"无损音乐免费下载",
+                            url:"https://www.sq688.com/",
+                            image: "sq688.png"
+                        },
                     ]
                 },
                 //其他工具
@@ -188,9 +264,27 @@ var navData = {
                     title: "其他工具",
                     nav: [
                         {
+                            title:"懒猴文字识别网页版",
+                            desc:"在线ORC(修改localStorage可无限次识别)",
+                            url:"https://h5cssjs.com/ocr",
+                            image:"h5cssjs.png"
+                        },
+                        {
                             title:"云短信",
                             desc:"在线免费短信接收|验证码短信",
                             url:"https://www.materialtools.com/",
+                        },
+                        {
+                            title:"隐私短信",
+                            desc:"免费在线短信验证码接收码平台",
+                            url:"https://www.yinsiduanxin.com/",
+                            image:"yinsiduanxin.png"
+                        },
+                        {
+                            title:"Nicetool",
+                            desc:"在线小工具大全",
+                            url:"http://www.nicetool.net/",
+                            image:"nicetool.png"
                         },
                     ]
                 }
@@ -245,6 +339,22 @@ var navData = {
                             title:"worlds-highest-website",
                             desc:"世界上最高的网站",
                             url:"https://worlds-highest-website.com/",
+                        },
+                        {
+                            title:"100,000 Stars",
+                            desc:"银河系十万颗星",
+                            url:"http://stars.chromeexperiments.com/",
+                        }, 
+                        {
+                            title:"Penint",
+                            desc:"【慎点】画雕专家，随便一画就变成...",
+                            url:"https://seoi.net/penint/",
+                        }, 
+                        {
+                            title:"Zty.pe",
+                            desc:"炫酷的在线打字游戏",
+                            url:"https://zty.pe/",
+                            image: "ztype.png"
                         }, 
                     ]
                 },
@@ -348,6 +458,12 @@ var navData = {
                             url:"https://www.doyoudo.com/",
                             image: "doyoudo.png"
                         },
+                        {
+                            title:"Oeasy",
+                            desc:"完全免费的视频学习平台",
+                            url:"http://oeasy.org/",
+                            image: "oeasy.png"
+                        },
                     ]
                 }
             ]
@@ -383,30 +499,44 @@ var navData = {
                         },
                     ]
                 },
-                //视音资源
+                //多媒体素材
                 {
-                    title: "视音资源",
+                    title: "多媒体素材",
                     nav: [
-                        {
-                            title:"海盗湾",
-                            desc:"BT搜索资源站",
-                            url:"http://thepiratebay.se.net/",
-                        },
-                        {
-                            title:"唧唧",
-                            desc:"下载b站视频|bilibili",
-                            url:"https://www.jijidown.com/",
-                        },
-                        {
-                            title:"超高无损音乐",
-                            desc:"无损音乐免费下载",
-                            url:"https://www.sq688.com/",
-                            image: "sq688.png"
-                        },
                         {
                             title:"摩声",
                             desc:"在线搜索各平台音乐",
                             url:"https://moresound.tk/music/",
+                        },
+                        {
+                            title:"Fugue",
+                            desc:"免费背景音乐的素材库",
+                            url:"https://icons8.com/music",
+                            image: "fugue.png"
+                        },
+                        {
+                            title:"Fugue",
+                            desc:"免费背景音乐的素材库",
+                            url:"https://icons8.com/music",
+                            image: "fugue.png"
+                        },
+                        {
+                            title:"新CG儿",
+                            desc:"AE模板|视频素材免费瞎子啊",
+                            url:"https://www.newcger.com/",
+                            image: "newcger.png"
+                        },
+                        {
+                            title:"爱给网",
+                            desc:"音频|视频|AE模板|3D模型免费下载",
+                            url:"http://www.aigei.com/",
+                            image: "aigei.png"
+                        },
+                        {
+                            title:"Mixkit",
+                            desc:"高清视频素材免费下载",
+                            url:"https://mixkit.co/",
+                            image: "mixkit.png"
                         },
                     ]
                 }
@@ -505,6 +635,30 @@ var navData = {
                             url:"https://www.dpm.org.cn/lights/royal.html",
                             image:"dpm.png"
                         },
+                        {
+                            title:"Pxhere",
+                            desc:"免费高清商业图片素材下载",
+                            url:"https://pxhere.com/",
+                            image:"pxhere.png"
+                        },
+                        {
+                            title:"Gratisography",
+                            desc:"免费高清商业图片素材下载",
+                            url:"https://gratisography.com/",
+                            image:"gratisography.png"
+                        },
+                        {
+                            title:"Logosc",
+                            desc:"免费高清商业图片素材下载",
+                            url:"https://www.logosc.cn/so/",
+                            image:"logosc.png"
+                        },
+                        {
+                            title:"100font",
+                            desc:"专门收集免费商用字体的网站",
+                            url:"https://www.100font.com/",
+                            image:"100font.png"
+                        },
                     ]
                 },
                 //UI 设计
@@ -567,6 +721,47 @@ var navData = {
                     ]
                 },
             ]
-        }
+        },
+        //购物平台
+        {
+            title: "购物平台",
+            icon: "shopping-cart",
+            nav:[
+                {
+                    title:"京东商城",
+                    desc:"支持东哥",
+                    url:"https://jd.com",
+                    image:"jd.png"
+                },
+                {
+                    title:"京东联盟",
+                    desc:"京东返利网站",
+                    url:"https://union.jd.com/",
+                    image:"jd.png"
+                },
+                {
+                    title:"淘宝",
+                    desc:"不解释",
+                    url:"https://taobao.com",
+                    image:"taobao.png"
+                },
+                {
+                    title:"阿里妈妈",
+                    desc:"淘宝返利网站",
+                    url:"https://www.alimama.com/",
+                    image:"alimama.png"
+                },
+            ]
+        },
+        //开发工具
+        // {
+        //     title: "开发工具",
+        //     icon: "code",
+        //     child: [
+        //         {
+        //             title: ""
+        //         }
+        //     ]
+        // }
     ]
 }

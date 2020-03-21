@@ -145,3 +145,6 @@
 .nav-total{
     color: #ffa34d;
 }
+.nav-item h4{
+    margin-bottom: 20px;
+}
