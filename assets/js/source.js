@@ -182,38 +182,234 @@ var navData = {
                             image:"pdfio.png"
                         },
                     ]
+                },
+                //其他工具
+                {
+                    title: "其他工具",
+                    nav: [
+                        {
+                            title:"云短信",
+                            desc:"在线免费短信接收|验证码短信",
+                            url:"https://www.materialtools.com/",
+                        },
+                    ]
                 }
             ]
         },
-        //有点意思
+        //休闲娱乐
         {
-            title: "有点意思",
+            title: "休闲娱乐",
             icon: "gamepad",
-            nav:[
+            child: [
+                //有点意思
                 {
-                    title:"自由钢琴",
-                    desc:"在线弹钢琴，内置很多简谱",
-                    url:"https://www.autopiano.cn/",
-                    image:"autopiano.png"
-                }, 
+                    title: "有点意思",
+                    nav:[
+                        {
+                            title:"自由钢琴",
+                            desc:"在线弹钢琴，内置很多简谱",
+                            url:"https://www.autopiano.cn/",
+                            image:"autopiano.png"
+                        }, 
+                        {
+                            title:"在线开车",
+                            desc:"一款精致的网页小游戏，低配电脑请勿打开",
+                            url:"https://bruno-simon.com/",
+                            image:"bruno-simon.png"
+                        }, 
+                        {
+                            title:"Minecraft",
+                            desc:"在线版我的世界",
+                            url:"https://classic.minecraft.net/",
+                            image:"minecraft.png"
+                        }, 
+                        {
+                            title:"小霸王",
+                            desc:"找回童年的快乐",
+                            url:"https://www.yikm.net/",
+                            image:"yikm.png"
+                        }, 
+                        {
+                            title:"Windows93",
+                            desc:"在线体验Windows93系统",
+                            url:"http://www.windows93.net/",
+                            image:"windows93.png"
+                        },
+                        {
+                            title:"magickeyboard",
+                            desc:"魔法键盘，让你输入的内容飞起来",
+                            url:"http://magickeyboard.io/",
+                            image:"magickeyboard.png"
+                        }, 
+                        {
+                            title:"worlds-highest-website",
+                            desc:"世界上最高的网站",
+                            url:"https://worlds-highest-website.com/",
+                        }, 
+                    ]
+                },
+                //影视平台
                 {
-                    title:"在线开车",
-                    desc:"一款精致的网页小游戏，低配电脑请勿打开",
-                    url:"https://bruno-simon.com/",
-                    image:"bruno-simon.png"
-                }, 
+                    title: "影视平台",
+                    nav: [
+                        {
+                            title:"Bilibili",
+                            desc:"在线学习平台",
+                            url:"https://www.bilibili.com/",
+                            image: "bilibili.png"
+                        }, 
+                        {
+                            title:"爱奇艺",
+                            desc:"在线视频网站",
+                            url:"https://www.iqiyi.com/",
+                            image: "iqiyi.png"
+                        }, 
+                        {
+                            title:"虎牙直播",
+                            desc:"弹幕式互动直播平台",
+                            url:"https://www.huya.com/",
+                            image: "huya.png"
+                        }, 
+                        {
+                            title:"船长解析",
+                            desc:"vip视频在线解析1",
+                            url:"http://czjx8.com/",
+                        }, 
+                        {
+                            title:"牛巴巴vip解析",
+                            desc:"vip视频在线解析2",
+                            url:"http://mv.688ing.com/",
+                        }, 
+                        {
+                            title:"爱爱客电影网",
+                            desc:"在线免费看电影",
+                            url:"http://www.aiaiaike.com/",
+                        }, 
+                        {
+                            title:"在线之家",
+                            desc:"免费在线观看电影|电视剧",
+                            url:"https://www.zxzj.me/",
+                        }, 
+                        {
+                            title:"JR看",
+                            desc:"体育赛事在线直播|纬来体育|NBA",
+                            url:"http://jrkan.com/",
+                        }, 
+                        {
+                            title:"球吧网",
+                            desc:"体育赛事在线直播|足球|NBA",
+                            url:"https://www.ballbar.cc/",
+                            image: "ballbar.png"
+                        }, 
+                    ]
+                },
+                //资讯平台
                 {
-                    title:"Minecraft",
-                    desc:"在线版我的世界",
-                    url:"https://classic.minecraft.net/",
-                    image:"minecraft.png"
-                }, 
+                    title: "资讯平台",
+                    nav: [
+                        {
+                            title:"鱼塘热榜",
+                            desc:"在线摸鱼平台|整合全网资源内容",
+                            url:"https://mo.fish/main/home/hot",
+                            image:"mofish.png"
+                        }, 
+                        {
+                            title:"虎扑",
+                            desc:"综合论坛|NBA交流|篮球论坛",
+                            url:"https://hupu.com",
+                            image:"hupu.png"
+                        }, 
+                    ]
+                },
+            ]
+        },
+        //学习平台
+        {
+            title: "学习平台",
+            icon: "book",
+            child: [
                 {
-                    title:"Windows93",
-                    desc:"在线体验Windows93系统",
-                    url:"http://www.windows93.net/",
-                    image:"windows93.png"
-                }, 
+                    title: "视频学习",
+                    nav: [
+                        {
+                            title:"慕课网",
+                            desc:"程序员的梦工厂",
+                            url:"https://www.imooc.com/",
+                            image: "imooc.png"
+                        },
+                        {
+                            title:"极客学院",
+                            desc:"IT在线教育平台",
+                            url:"https://www.jikexueyuan.com/",
+                        },
+                        {
+                            title:"Doyoudo",
+                            desc:"设计类学习平台",
+                            url:"https://www.doyoudo.com/",
+                            image: "doyoudo.png"
+                        },
+                    ]
+                }
+            ]
+        },
+        //网络资源
+        {
+            title:"网络资源",
+            icon: "cloud",
+            child:[
+                //软件资源
+                {
+                    title: "软件资源",
+                    nav: [
+                        {
+                            title:"ZD423",
+                            desc:"非盈利性的软件下载博客|绿色软件|破解软件",
+                            url:"https://www.zdfans.com/",
+                        },
+                        {
+                            title:"小众软件",
+                            desc:"小众却实用的软件|软件下载",
+                            url:"https://love.appinn.com/",
+                        },
+                        {
+                            title:"风刑软件站",
+                            desc:"优秀软件分享下载平台",
+                            url:"http://www.wsf1234.com/",
+                        },
+                        {
+                            title:"睿派克论坛",
+                            desc:"去广告软件|破解软件交流平台",
+                            url:"https://www.repaik.com/",
+                        },
+                    ]
+                },
+                //视音资源
+                {
+                    title: "视音资源",
+                    nav: [
+                        {
+                            title:"海盗湾",
+                            desc:"BT搜索资源站",
+                            url:"http://thepiratebay.se.net/",
+                        },
+                        {
+                            title:"唧唧",
+                            desc:"下载b站视频|bilibili",
+                            url:"https://www.jijidown.com/",
+                        },
+                        {
+                            title:"超高无损音乐",
+                            desc:"无损音乐免费下载",
+                            url:"https://www.sq688.com/",
+                            image: "sq688.png"
+                        },
+                        {
+                            title:"摩声",
+                            desc:"在线搜索各平台音乐",
+                            url:"https://moresound.tk/music/",
+                        },
+                    ]
+                }
             ]
         },
         //设计资源

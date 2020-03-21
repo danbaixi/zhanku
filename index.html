@@ -58,7 +58,7 @@
                     </form>
                 </div>
                 <div class="total hidden-xs">
-                    <p>共收集了 <span class="nav-total">0</span> 个优质网站</p>
+                    <p>已收集了 <span class="nav-total">0</span> 个优质网站</p>
                 </div>
                 <div id="menu-content"></div>
             </div>
@@ -265,8 +265,9 @@
         $(document).find(".xe-comment").each(function(i,e){
             var title = $(e).find(".title").html().toLowerCase()
             var desc = $(e).find(".desc").html().toLowerCase()
+            var url = $(e).parents(".box2").data("original-title")
             var parent = $(e).parents(".col-sm-3")
-            if((title.indexOf(keyWord) != -1 || desc.indexOf(keyWord) != -1)){
+            if((title.indexOf(keyWord) != -1 || desc.indexOf(keyWord) != -1) || url.indexOf(keyWord) != -1){
                 if(parent.hasClass("hide")){
                     parent.removeClass("hide")
                 }
