@@ -187,6 +187,12 @@ var navData = {
                             url:"https://logoly.pro/",
                             image:"logoly.png"
                         },
+                        {
+                            title:"Loading.io",
+                            desc:"在线设计loading动图",
+                            url:"https://loading.io/",
+                            image:"loading.png"
+                        },
                     ]
                 },
                 //文件处理
@@ -256,6 +262,12 @@ var navData = {
                             desc:"无损音乐免费下载",
                             url:"https://www.sq688.com/",
                             image: "sq688.png"
+                        },
+                        {
+                            title:"QQ音乐解析",
+                            desc:"无损音乐解析",
+                            url:"http://www.douqq.com/qqmusic/",
+                            image: "qqmusic.png"
                         },
                     ]
                 },
@@ -433,13 +445,13 @@ var navData = {
                 },
             ]
         },
-        //学习平台
+        //编程人生
         {
-            title: "学习平台",
+            title: "编程人生",
             icon: "book",
             child: [
                 {
-                    title: "视频学习",
+                    title: "学习平台",
                     nav: [
                         {
                             title:"慕课网",
@@ -465,6 +477,40 @@ var navData = {
                             image: "oeasy.png"
                         },
                     ]
+                },
+                {
+                    title: "交流社区",
+                    nav:[
+                        {
+                            title:"Github",
+                            desc:"全球最大的同性交友网站",
+                            url:"https://github.im/",
+                            image: "github.png"
+                        },
+                        {
+                            title:"掘金",
+                            desc:"优质学习内容分享社区",
+                            url:"https://juejin.im/",
+                            image: "juejin.png"
+                        },
+                        {
+                            title:"吾爱破解",
+                            desc:"优质破解软件分享社区",
+                            url:"https://www.52pojie.cn/",
+                        },
+                        {
+                            title:"v2ex",
+                            desc:"创意工作者的社区",
+                            url:"https://www.v2ex.com/",
+                            image: "v2ex.png"
+                        },
+                        {
+                            title:"牛客网",
+                            desc:"互联网求职学习平台",
+                            url:"https://www.nowcoder.com/",
+                            image: "niuke.png"
+                        },
+                    ]
                 }
             ]
         },
@@ -477,6 +523,11 @@ var navData = {
                 {
                     title: "软件资源",
                     nav: [
+                        {
+                            title:"MSDN",
+                            desc:"纯净操作系统下载资源",
+                            url:"https://msdn.itellyou.cn/",
+                        },
                         {
                             title:"ZD423",
                             desc:"非盈利性的软件下载博客|绿色软件|破解软件",
@@ -507,12 +558,6 @@ var navData = {
                             title:"摩声",
                             desc:"在线搜索各平台音乐",
                             url:"https://moresound.tk/music/",
-                        },
-                        {
-                            title:"Fugue",
-                            desc:"免费背景音乐的素材库",
-                            url:"https://icons8.com/music",
-                            image: "fugue.png"
                         },
                         {
                             title:"Fugue",
@@ -683,6 +728,12 @@ var navData = {
                             url:"http://sucai.sketchchina.com/",
                             image:"sketchchina.png"
                         },
+                        {
+                            title:"墨刀",
+                            desc:"在线设计原型图",
+                            url:"https://org.modao.cc/",
+                            image:"modao.png"
+                        },
                     ]
                 },
                 //Mockup
@@ -728,15 +779,21 @@ var navData = {
             icon: "shopping-cart",
             nav:[
                 {
+                    title:"什么值得买",
+                    desc:"张大妈你值得拥有",
+                    url:"https://www.smzdm.com/",
+                    image:"smzdm.png"
+                },
+                {
+                    title:"逛丢",
+                    desc:"实时同步全网折扣",
+                    url:"https://guangdiu.com/",
+                    image:"guangdiu.png"
+                },
+                {
                     title:"京东商城",
                     desc:"支持东哥",
                     url:"https://jd.com",
-                    image:"jd.png"
-                },
-                {
-                    title:"京东联盟",
-                    desc:"京东返利网站",
-                    url:"https://union.jd.com/",
                     image:"jd.png"
                 },
                 {
@@ -744,6 +801,12 @@ var navData = {
                     desc:"不解释",
                     url:"https://taobao.com",
                     image:"taobao.png"
+                },
+                {
+                    title:"京东联盟",
+                    desc:"京东返利网站",
+                    url:"https://union.jd.com/",
+                    image:"jd.png"
                 },
                 {
                     title:"阿里妈妈",
