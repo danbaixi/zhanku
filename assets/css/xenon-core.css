@@ -6737,7 +6737,10 @@ blockquote small {
     color: #222
 }
 
-.modal .modal-dialog .modal-content {
+/**
+    和bootstrap冲突了，只能注释你了
+*/
+/* .modal .modal-dialog .modal-content {
     -webkit-box-shadow: none;
     -moz-box-shadow: none;
     box-shadow: none;
@@ -6802,7 +6805,7 @@ blockquote small {
     -o-transform: scale(1);
     -ms-transform: scale(1);
     transform: scale(1)
-}
+} */
 
 .table.table-bordered {
     border-color: #eee

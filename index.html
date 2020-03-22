@@ -10,10 +10,9 @@
     <meta name="description" content="站库 - 优质网站收藏库">
     <link rel="shortcut icon" href="assets/images/favicon.png">
     <link rel="stylesheet" href="assets/css/fonts/fontawesome/css/font-awesome.min.css">
-    <link rel="stylesheet" href="assets/css/bootstrap.css">
     <link rel="stylesheet" href="assets/css/xenon-core.css">
     <link rel="stylesheet" href="assets/css/xenon-components.css">
-    <link rel="stylesheet" href="assets/css/xenon-skins.css">
+    <link rel="stylesheet" href="assets/css/bootstrap.css">
     <link rel="stylesheet" href="assets/css/nav.css">
     <script src="assets/js/jquery-1.11.1.min.js"></script>
     <script src="assets/js/art-template.js"></script>
@@ -71,6 +70,9 @@
                     <p>已收集了 <span class="nav-total">0</span> 个优质网站</p>
                 </div>
                 <div id="menu-content"></div>
+                <div class="submit-site">
+                    <a class="btn btn-primary" data-toggle="modal" data-target="#submitSite">提交网站</a>
+                </div>
             </div>
         </div>
         <div class="main-content">
@@ -79,6 +81,19 @@
             </a>
             <!-- 列表 -->
             <div id="nav-list"></div>
+        </div>
+        <div class="modal fade" id="submitSite" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                        <h4 class="modal-title" id="myModalLabel">感谢您向我们提交优秀网站</h4>
+                    </div>
+                    <div class="modal-body">
+                        <iframe width="100%" height="440" frameborder="no" src="https://uva9tg.fanqier.cn/f/oxkkabys"></iframe>
+                    </div>
+                </div>
+            </div>
         </div>
     </div>
 </body>
@@ -114,47 +129,46 @@
 <!-- 列表模板 -->
 <script id="list" type="text/html">
 {{each list l}}
-<div class="nav-item">
     {{if l.nav}}
-    <h4 class="text-gray"><i class="fa fa-bookmark-o" style="margin-right: 7px;" id="{{l.title}}"></i>{{l.title}} 
-        <span class="nav-count">({{l.nav | getNavLength}})</span>
-    </h4>
-    <div class="row">
-        {{each l.nav n}}
-        <div class="col-sm-3 col-lg-2">
-            <div class="xe-widget xe-conversations box2 label-info" onclick="window.open('{{n.url}}', '_blank')" data-toggle="tooltip" data-placement="bottom" title="" data-original-title="{{n.url}}">
-                <div class="xe-comment-entry">
-                    <a class="xe-user-img">
-                        {{if n.image}}
-                        <img data-src="assets/images/logos/{{n.image}}" class="lozad">
-                        {{else}}
-                        <span style="backgroud:{{n.title | randomColor}}">{{n.title | titleFirstWord}}</span>
-                        {{/if}}
-                    </a>
-                    <div class="xe-comment">
-                        <a href="#" class="xe-user-name overflowClip_1">
-                            <p class="title">{{n.title}}</p>
+    <div class="nav-item" id="{{l.title}}">
+        <h4 class="text-gray"><i class="fa fa-bookmark-o" style="margin-right: 7px;"></i>{{l.title}} 
+            <span class="nav-count">({{ l.nav | getNavLength l.title}})</span>
+        </h4>
+        <div class="row">
+            {{each l.nav n}}
+            <div class="col-sm-3 col-lg-2">
+                <div class="xe-widget xe-conversations box2 label-info site-box" data-toggle="tooltip" data-placement="bottom" title="" data-url="{{n.url}}">
+                    <div class="xe-comment-entry">
+                        <a class="xe-user-img">
+                            {{if n.image}}
+                            <img data-src="assets/images/logos/{{n.image}}" class="lozad">
+                            {{else}}
+                            <span style="background:{{n.title | randomColor}}">{{n.title | titleFirstWord}}</span>
+                            {{/if}}
                         </a>
-                        <p class="desc overflowClip_2">{{n.desc}}</p>
+                        <div class="xe-comment"> 
+                            <p class="title xe-user-name overflowClip_1">{{n.title}}</p>
+                            <p class="desc overflowClip_2">{{n.desc}}</p>
+                        </div>
                     </div>
                 </div>
             </div>
-        </div>
-        {{/each}}
+            {{/each}}
+        </div>  
     </div>
     {{/if}}
 
     {{if l.child}}
         {{each l.child c}}
-        <div class="nav-item">
+        <div class="nav-item" id="{{c.title}}">
             <h4 class="text-gray">
-                <i class="fa fa-bookmark-o" style="margin-right: 7px;" id="{{c.title}}"></i>{{c.title}} 
-                <span class="nav-count">({{c.nav | getNavLength}})</span>
+                <i class="fa fa-bookmark-o" style="margin-right: 7px;"></i>{{c.title}} 
+                <span class="nav-count">({{c.nav | getNavLength c.title }})</span>
             </h4>
             <div class="row">
                 {{each c.nav n}}
                 <div class="col-sm-3 col-lg-2">
-                    <div class="xe-widget xe-conversations box2 label-info" onclick="window.open('{{n.url}}', '_blank')" data-toggle="tooltip" data-placement="bottom" title="" data-original-title="{{n.url}}">
+                    <div class="xe-widget xe-conversations box2 label-info site-box" data-toggle="tooltip" data-placement="bottom" title="" data-url="{{n.url}}">
                         <div class="xe-comment-entry">
                             <a class="xe-user-img">
                                 {{if n.image}}
@@ -164,24 +178,25 @@
                                 {{/if}}
                             </a>
                             <div class="xe-comment">
-                                <a href="#" class="xe-user-name overflowClip_1">
-                                    <p class="title">{{n.title}}</p>
-                                </a>
+                                <p class="title xe-user-name overflowClip_1">{{n.title}}</p>
                                 <p class="desc overflowClip_2">{{n.desc}}</p>
                             </div>
                         </div>
                     </div>
                 </div>
                 {{/each}}
+            </div>
         </div>
         {{/each}}
-    </div>
     {{/if}}
-</div>
 {{/each}}
 </script>
 <script type="text/javascript">
+    //缓存名称
+    var storageName = 'zk_history'
+
     $(document).ready(function() {
+        refreshStorage()
         render()
         //监听搜索
         $("input[name='search']").bind('input propertychange',function(){
@@ -214,20 +229,6 @@
             $(this).siblings('li').removeClass('active'); // 删除其他兄弟元素的样式
             $(this).addClass('active'); // 添加当前元素的样式
         });
-        $("a.smooth").click(function(ev) {
-            ev.preventDefault();
-
-            public_vars.$mainMenu.add(public_vars.$sidebarProfile).toggleClass('mobile-is-visible');
-            ps_destroy();
-            if($($(this).attr("href")).length > 0){
-                $("html, body").animate({
-                scrollTop: $($(this).attr("href")).offset().top - 30
-            }, {
-                duration: 500,
-                easing: "swing"
-            });
-            }
-        });
         return false;
     });
 
@@ -257,8 +258,10 @@
             return colors[index]
         }
         //注册过滤器，获取分类下网站个数
-        template.defaults.imports.getNavLength = function(nav){
-            navTotal += nav.length
+        template.defaults.imports.getNavLength = function(nav,title){
+            if(title != "最近使用"){
+                navTotal += nav.length
+            }
             return nav.length
         }
         var data = navData
@@ -275,7 +278,7 @@
         $(document).find(".xe-comment").each(function(i,e){
             var title = $(e).find(".title").html().toLowerCase()
             var desc = $(e).find(".desc").html().toLowerCase()
-            var url = $(e).parents(".box2").data("original-title")
+            var url = $(e).parents(".box2").data("url")
             var parent = $(e).parents(".col-sm-3")
             if((title.indexOf(keyWord) != -1 || desc.indexOf(keyWord) != -1) || url.indexOf(keyWord) != -1){
                 if(parent.hasClass("hide")){
@@ -286,6 +289,90 @@
             }
         })
     }
+
+    //刷新最近访问历史
+    function refreshStorage(){
+        var history = localStorage.getItem(storageName)
+        if(!history){
+            return
+        }
+        history = JSON.parse(history)
+        navData.list[0].nav = history
+    }
+
+    //重新渲染历史访问
+    function reloadHistory(){
+        refreshStorage()
+        $("#最近使用").remove()
+        var data = {list: []}
+        data.list.push(navData.list[0])
+        var list = template('list', data)
+        $("#nav-list").prepend(list)
+        const observer = lozad();
+        observer.observe();
+    }
+
+    //历史记录 入栈
+    function pushHistory(data,deleteData){
+        var history = localStorage.getItem(storageName)
+        var deleteData = deleteData || ''
+        history = JSON.parse(history)
+        if(!history){
+            history = []
+            history.push(data)
+        }else{
+            for(var i = history.length -1;i>= 0;i--){
+                if(history[i].url == deleteData){
+                    history.splice(i,1)
+                    continue
+                }
+                history[i+1] = history[i]
+            }
+            history[0] = data
+        }
+        localStorage.setItem(storageName,JSON.stringify(history))
+    }
+
+    //访问链接
+    $(document).on("click",".site-box",function(e){
+        var url = $(this).data("url")
+        window.open(url)
+        var history = localStorage.getItem(storageName)
+        history = JSON.parse(history)
+        var inList = false
+        if(history){
+            for(var i=0;i<history.length;i++){
+                if(url == history[i].url){
+                    //将位置放到首个
+                    pushHistory(history[i],history[i].url)
+                    inList = true
+                    break;
+                }
+            }
+        }
+        if(!inList){
+            //不在历史列表中
+            var title = $(this).find(".title").html()
+            var desc = $(this).find(".desc").html()
+            var image = ""
+            if($(this).find(".xe-user-img img").length > 0){
+                //有logo
+                var imageUrl = $($(this).find(".xe-user-img img")[0]).data('src')
+                var tmp = imageUrl.split('/')
+                if(tmp.length > 0){
+                    image = tmp[tmp.length-1]
+                }
+            }
+            var data = {
+                title: title,
+                url: url,
+                desc: desc,
+                image: image
+            }
+            pushHistory(data)
+        }
+        reloadHistory()
+    })
 
 </script>
 <!-- Bottom Scripts -->

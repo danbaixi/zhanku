@@ -64,7 +64,7 @@
 }
 
 .search{
-    padding: 20px 30px;
+    padding: 10px 30px;
 }
 
 .xe-comment-entry span {
@@ -110,7 +110,7 @@
 }
 .hidden-sm{
     position: absolute;
-    right: 6px;
+    right: 10px;
     top: 4px;
     list-style: none;
 }
@@ -140,6 +140,7 @@
     color: #999;
 }
 .total{
+    padding: 10px 0 0;
     text-align: center;
 }
 .nav-total{
@@ -147,4 +148,18 @@
 }
 .nav-item h4{
     margin-bottom: 20px;
+}
+.submit-site{
+    padding: 8px 0;
+    text-align: center;
+}
+.submit-site a{
+    color: white;
+}
+.modal-content{
+    border-radius: 8px;
+}
+.btn-primary{
+    background: transparent;
+    border: none;
 }

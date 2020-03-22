@@ -1,13 +1,11 @@
 var navData = {
     list:[
-        //常用推荐
-        // {
-        //     title: "常用推荐",
-        //     icon: "star",
-        //     nav:[
-                
-        //     ]
-        // },
+        //最近使用
+        {
+            title: "最近使用",
+            icon: "history",
+            nav: []
+        },
         //实用工具
         {
             title: "实用工具",
@@ -393,13 +391,8 @@ var navData = {
                             image: "huya.png"
                         }, 
                         {
-                            title:"船长解析",
-                            desc:"vip视频在线解析1",
-                            url:"http://czjx8.com/",
-                        }, 
-                        {
                             title:"牛巴巴vip解析",
-                            desc:"vip视频在线解析2",
+                            desc:"vip视频在线解析",
                             url:"http://mv.688ing.com/",
                         }, 
                         {
