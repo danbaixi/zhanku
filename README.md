@@ -1,34 +1,33 @@
-### 站库 - 优质网站收藏库
+## 站库 - 优质网站收藏库
+--------------------
 
-------
-
-#### 项目介绍
+### 项目介绍
 
 此项目用于收集优质网站，支持查看浏览记录和搜索，目前已收集100+个网站，以后也会不断收集新网站，喜欢的童鞋，请给个star哦。
 
 基于 [WebStackPage](https://github.com/WebStackPage/WebStackPage.github.io) 项目修改
 
-#### 修改内容
+### 修改内容
 > 1. 使用art-template.js 渲染模板
 > 2. 添加搜索网站功能
 > 3. 添加访问历史记录
 > 4. 优化一些体验
 > 5. 删减一些文件
 
-#### 在线预览
+### 在线预览
 [https://zk.yunxiaozhi.cn](https://zk.yunxiaozhi.cn)
 
-#### 预览图
+### 预览图
 ![预览图](/assets/images/screenshot.png)
 
-#### 如何使用
+### 如何使用
 
 
-##### 下载代码
+#### 下载代码
 ``` bash
 git clone git@github.com:danbaixi/zhanku.git
 ```
-##### 修改 assets/js/source.js
+#### 修改 assets/js/source.js
 source.js结构如下：
 
 ``` js
@@ -69,7 +68,7 @@ source.js结构如下：
 }
 ```
 
-#### 感谢
+### 感谢
 <a href="https://github.com/WebStackPage/WebStackPage.github.io" target="_blank">WebStackPage</a>
 
 <a href="https://github.com/aui/art-template" target="_blank">art-template</a>
