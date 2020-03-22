@@ -2,7 +2,7 @@
 
 ------
 
-####项目介绍
+#### 项目介绍
 
 此项目用于收集优质网站，支持查看浏览记录和搜索，目前已收集100+个网站，以后也会不断收集新网站，喜欢的童鞋，请给个star哦。
 
@@ -18,7 +18,7 @@
 #### 在线预览
 <a href="https://zk.yunxiaozhi.cn" target="_blank">https://zk.yunxiaozhi.cn</a>
 
-####预览图
+#### 预览图
 ![预览图](/assets/images/screenshot.png)
 
 #### 如何使用
