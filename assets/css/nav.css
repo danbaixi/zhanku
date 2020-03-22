@@ -118,7 +118,8 @@
     color: white;
 }
 .collapsed .search ,
-.collapsed .total{
+.collapsed .total,
+.collapsed .submit-site{
     display: none;
 }
 .sidebar-menu .logo-env .mobile-logo{
@@ -154,7 +155,7 @@
     text-align: center;
 }
 .submit-site a{
-    color: white;
+    color: grey;
 }
 .modal-content{
     border-radius: 8px;
@@ -162,4 +163,7 @@
 .btn-primary{
     background: transparent;
     border: none;
+}
+.sidebar-menu.collapsed .sidebar-menu-inner{
+    position: fixed;
 }
