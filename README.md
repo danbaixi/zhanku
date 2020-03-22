@@ -8,30 +8,30 @@
 
 该项目基于 <a href="https://github.com/WebStackPage/WebStackPage.github.io" target="_blank">WebStackPage</a> 项目修改
 
-####修改内容
+#### 修改内容
 > 1. 使用art-template.js 渲染模板
 > 2. 添加搜索网站功能
 > 3. 添加访问历史记录
 > 4. 优化一些体验
 > 5. 删减一些文件
 
-####在线预览
+#### 在线预览
 <a href="https://zk.yunxiaozhi.cn" target="_blank">https://zk.yunxiaozhi.cn</a>
 
 ####预览图
 ![预览图](/assets/images/screenshot.png)
 
-####如何使用
+#### 如何使用
 
 
-#####下载代码
-```git
+##### 下载代码
+``` bash
 git clone git@github.com:danbaixi/zhanku.git
 ```
 #####修改 assets/js/source.js
 source.js结构如下：
 
-```json
+``` js
 {
     list:[
 
@@ -69,7 +69,7 @@ source.js结构如下：
 }
 ```
 
-####感谢
+#### 感谢
 <a href="https://github.com/WebStackPage/WebStackPage.github.io" target="_blank">WebStackPage</a>
 
 <a href="https://github.com/aui/art-template" target="_blank">art-template</a>
