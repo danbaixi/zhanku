@@ -6,7 +6,7 @@
 
 此项目用于收集优质网站，支持查看浏览记录和搜索，目前已收集100+个网站，以后也会不断收集新网站，喜欢的童鞋，请给个star哦。
 
-该项目基于 <a href="https://github.com/WebStackPage/WebStackPage.github.io" target="_blank">WebStackPage</a> 项目修改
+基于 [WebStackPage](https://github.com/WebStackPage/WebStackPage.github.io) 项目修改
 
 #### 修改内容
 > 1. 使用art-template.js 渲染模板
@@ -16,7 +16,7 @@
 > 5. 删减一些文件
 
 #### 在线预览
-<a href="https://zk.yunxiaozhi.cn" target="_blank">https://zk.yunxiaozhi.cn</a>
+[https://zk.yunxiaozhi.cn](https://zk.yunxiaozhi.cn)
 
 #### 预览图
 ![预览图](/assets/images/screenshot.png)
@@ -28,7 +28,7 @@
 ``` bash
 git clone git@github.com:danbaixi/zhanku.git
 ```
-#####修改 assets/js/source.js
+##### 修改 assets/js/source.js
 source.js结构如下：
 
 ``` js
