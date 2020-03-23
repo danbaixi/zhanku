@@ -241,6 +241,30 @@ var navData = {
                         },
                     ]
                 },
+                //临时网盘
+                {
+                    title: "临时网盘",
+                    nav:[
+                        {
+                            title:"牛奶快传",
+                            desc:"即用即走的在线大文件传输服务",
+                            url:"https://cowtransfer.com/",
+                            image:"cowtransfer.png"
+                        }, 
+                        {
+                            title:"文叔叔",
+                            desc:"不限速分享大文件在线网盘",
+                            url:"https://www.wenshushu.cn/",
+                            image:"wenshushu.png"
+                        }, 
+                        {
+                            title:"蓝奏云",
+                            desc:"小文件分享不限速网盘",
+                            url:"https://www.lanzou.com/",
+                            image:"lanzou.png"
+                        }, 
+                    ]
+                },
                 //下载工具
                 {
                     title:"下载工具",
@@ -295,6 +319,12 @@ var navData = {
                             desc:"在线小工具大全",
                             url:"http://www.nicetool.net/",
                             image:"nicetool.png"
+                        },
+                        {
+                            title:"工资计算器",
+                            desc:"在线计算税后工资",
+                            url:"https://hizdm.cn",
+                            image:"hizdm.png"
                         },
                     ]
                 }
@@ -443,6 +473,7 @@ var navData = {
             title: "编程人生",
             icon: "book",
             child: [
+                //学习平台
                 {
                     title: "学习平台",
                     nav: [
@@ -471,6 +502,7 @@ var navData = {
                         },
                     ]
                 },
+                //交流社区
                 {
                     title: "交流社区",
                     nav:[
@@ -504,7 +536,8 @@ var navData = {
                             image: "niuke.png"
                         },
                     ]
-                }
+                },
+                //开发工具
             ]
         },
         //网络资源
@@ -809,15 +842,5 @@ var navData = {
                 },
             ]
         },
-        //开发工具
-        // {
-        //     title: "开发工具",
-        //     icon: "code",
-        //     child: [
-        //         {
-        //             title: ""
-        //         }
-        //     ]
-        // }
     ]
 }
