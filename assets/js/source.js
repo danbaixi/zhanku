@@ -191,6 +191,12 @@ var navData = {
                             url:"https://loading.io/",
                             image:"loading.png"
                         },
+                        {
+                            title:"remove.bg",
+                            desc:"在线一键抠图",
+                            url:"https://www.remove.bg/zh",
+                            image:"removebg.png"
+                        },
                     ]
                 },
                 //文件处理
@@ -752,6 +758,12 @@ var navData = {
                             desc:"专门收集免费商用字体的网站",
                             url:"https://www.100font.com/",
                             image:"100font.png"
+                        },
+                        {
+                            title:"fontspace",
+                            desc:"免费字体，65000+款免费字体",
+                            url:"https://www.fontspace.com/",
+                            image:"fontspace.png"
                         },
                     ]
                 },
