@@ -500,6 +500,12 @@ var navData = {
                             url:"http://oeasy.org/",
                             image: "oeasy.png"
                         },
+                        {
+                            title:"crash course中文版",
+                            desc:"综合学习资源网站",
+                            url:"https://crashcourse.club/category/",
+                            image: "crashcourse.png"
+                        },
                     ]
                 },
                 //交流社区
@@ -535,9 +541,26 @@ var navData = {
                             url:"https://www.nowcoder.com/",
                             image: "niuke.png"
                         },
+                        {
+                            title:"LeetCode",
+                            desc:"刷题学习平台",
+                            url:"https://leetcode-cn.com/problemset/all/",
+                            image: "leetcode.png"
+                        },
                     ]
                 },
                 //开发工具
+                {
+                    title:"开发工具",
+                    nav:[
+                        {
+                            title:"Carbon",
+                            desc:"在线生成精美的代码片段图片",
+                            url:"https://carbon.now.sh/",
+                            image: "carbon.png"
+                        },
+                    ]
+                }
             ]
         },
         //网络资源
